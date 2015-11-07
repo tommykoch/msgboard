@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+{% block body %}
+<form action="{{ url_for('send_message') }}" method="post">
+      <dl>
+        <dt>Absender:
+        <dd><input id="sender" type="text" size=30 name="sender">
+        <dt>Nachricht:
+        <dd><input id="text" type="text" size=30 name="text" onkeydown="if (event.keyCode == 13) document.getElementById('btnPost').click()" />
+        <dd><input id="postbutton" type="submit" value="Senden">
+      </dl>
+</form>
+{% endblock %}

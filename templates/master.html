@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Nachrichten</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Nachrichten</h1>
+  <div>
+    <ul>
+    <li>
+    <a href="{{ url_for('send_message') }}">Nachricht versenden</a>
+    </li>
+    <li>
+    <a href="{{ url_for('show_messages') }}">Nachrichten anzeigen</a>
+    </li>
+    </ul>
+  </div>
+  {% block body %}{% endblock %}
+</div>
